@@ -1,0 +1,19 @@
+{
+  "name": "react-sandbox",
+  "version": "1.0.0",
+  "description": "A general client-side repository for experimenting with React, Typescript, CSS and other subjects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgu13/react-sandbox.git"
+  },
+  "author": "David Guriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidgu13/react-sandbox/issues"
+  },
+  "homepage": "https://github.com/davidgu13/react-sandbox#readme"
+}
