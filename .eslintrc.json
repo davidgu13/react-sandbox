@@ -6,7 +6,10 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
     ],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
@@ -14,16 +17,33 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint"],
+    "plugins": ["import", "react", "@typescript-eslint"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "windows"],
         "quotes": ["error", "double"],
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "external",
+                    "internal",
+                    "builtin",
+                    "parent",
+                    "sibling",
+                    "index"
+                ]
+            }
+        ]
     },
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": true,
+            "node": true
         }
     }
 }
