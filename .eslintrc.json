@@ -17,7 +17,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["import", "react", "@typescript-eslint"],
+    "plugins": ["import", "react", "@typescript-eslint", "react-hooks"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "windows"],
@@ -35,7 +35,9 @@
                     "index"
                 ]
             }
-        ]
+        ],
+        "react-hooks/rules-of-hooks": "warn",
+        "react-hooks/exhaustive-deps": "warn"
     },
     "settings": {
         "react": {
