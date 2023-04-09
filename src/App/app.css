@@ -10,22 +10,41 @@ body {
     font-size: 22px;
 }
 
+/* In Firefox, the syntax is simpler (not supported in Chrome) */
+@supports (scrollbar-color: gray white) {
+    * {
+        scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
+        scrollbar-width: thin; /* units aren't allowed */
+    }
+}
+
+/* Set width */
 ::-webkit-scrollbar {
     width: var(--scrollbar-width);
 }
 
+/* The area behind the handle */
 ::-webkit-scrollbar-track {
     background: var(--scrollbar-background-color);
     border-radius: 100vw;
     margin-block: calc(var(--scrollbar-width) * 0.5);
 }
 
+/* The handle */
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb-color);
     border: calc(var(--scrollbar-width) * 0.25) solid var(--scrollbar-background-color);
     border-radius: 100vw;
 }
 
+/* When hovering the handle */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-thumb-hover-color);
 }
+
+/*
+Notes:
+1. It's also possible to set this design in the scope of some element, according to a pre-set class name.
+2. For horizontal scrollers, remember to modify the webkit-scrollbar height instead of width.
+3. Make sure there is enough contrast 
+*/
