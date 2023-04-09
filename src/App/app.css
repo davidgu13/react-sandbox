@@ -1,3 +1,31 @@
+:root {
+    --scrollbar-width: 1em;
+    --scrollbar-hue: 30;
+    --scrollbar-background-color: hsl(var(--scrollbar-hue) 100% 50% / 1);
+    --scrollbar-thumb-color: hsl(var(--scrollbar-hue) 100% 25% / 1);
+    --scrollbar-thumb-hover-color: hsl(var(--scrollbar-hue) 100% 10% / 1);
+}
+
 body {
-    color: blue;
+    font-size: 22px;
+}
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-background-color);
+    border-radius: 100vw;
+    margin-block: calc(var(--scrollbar-width) * 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border: calc(var(--scrollbar-width) * 0.25) solid var(--scrollbar-background-color);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-color);
 }
