@@ -6,10 +6,6 @@
     --scrollbar-thumb-hover-color: hsl(var(--scrollbar-hue) 100% 10% / 1);
 }
 
-body {
-    font-size: 22px;
-}
-
 /* In Firefox, the syntax is simpler (not supported in Chrome) */
 @supports (scrollbar-color: gray white) {
     * {
