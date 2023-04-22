@@ -1,0 +1,16 @@
+AlDuncanson.react-hooks-snippets
+burkeholland.simple-react-snippets
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+genieai.chatgpt-vscode
+James-Yu.latex-workshop
+mhutchie.git-graph
+PKief.material-icon-theme
+ritwickdey.LiveServer
+rvest.vs-code-prettier-eslint
+steoates.autoimport
+streetsidesoftware.code-spell-checker
+valentjn.vscode-ltex
+xabikos.ReactSnippets
