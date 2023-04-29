@@ -20,19 +20,20 @@ Good luck!
 
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
-import { QueryClient } from "react-query";
+import { useQueryClient } from "@tanstack/react-query";
 
 interface IUseFetch {
     url: string;
     params: Record<string, unknown>;
     controller: AbortController;
-    queryClient: QueryClient;
 }
 
-function useFetch<T>({ url, params, controller, queryClient }: IUseFetch) {
+function useFetch<T>({ url, params, controller }: IUseFetch) {
     const [isLoading, setIsLoading] = useState(false);
     const [isFailed, setIsFailed] = useState(false);
     const [data, setData] = useState<T | null>();
+
+    const queryClient = useQueryClient();
 
     const fetch = useCallback(async () => {
         try {
@@ -60,7 +61,7 @@ function useFetch<T>({ url, params, controller, queryClient }: IUseFetch) {
 
         return () => {
             controller.abort();
-            queryClient.removeQueries(["fetching"]);
+            queryClient.removeQueries(["FETCH_SINGLE_JOKE"]); // hard-coded for now
         };
     }, [controller, fetch, params, queryClient, url]);
 

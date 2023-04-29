@@ -9,11 +9,11 @@ const App = (): JSX.Element => {
     return (
         // <StrictMode>
         <>
-            <h1>Hellooooo00 React!</h1>
+            <h1 style={{ textAlign: "center" }}>Hellooooo00 React!</h1>
             {/* <Example1 /> */}
             {/* <Example2 /> */}
             {/* <CustomScrollbar /> */}
-            <FetchingExample jokesCount={1} />
+            <FetchingExample jokesCount={20} />
         </>
         // </StrictMode>
     );
