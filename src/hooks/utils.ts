@@ -1,0 +1,1 @@
+export const FETCHING_QUERY_KEY = ["FETCH_SINGLE_JOKE"];

@@ -1,7 +1,7 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import Jokes from "./Jokes/Jokes";
+import Jokes from "./Jokes";
 
 const JOKES_URL = "https://v2.jokeapi.dev/joke/Any";
 
